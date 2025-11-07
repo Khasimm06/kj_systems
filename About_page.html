@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KJ SYSTEMS - About Us</title>
+    <link rel="stylesheet" href="About_page.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="KJ_SYSTEMS-LOGO.png" alt="KJ SYSTEMS Logo" width="75" height="75">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="About_page.html">About</a></li>
+                <li><a href="Careers_page.html">Careers</a></li>
+                <li><a href="Contact_page.html">Contact</a></li>
+            </ul>
+            <div class="burger">&#9776;</div>
+        </nav>
+    </header>
+
+    <section class="about-hero">
+        <div class="hero-overlay">
+            <h1><i><b>About KJ Systems</b></i></h1>
+            <p><i>Innovating technology for a smarter, connected world.</i></p>
+        </div>
+    </section>
+
+    <!-- COMPANY INFO SECTION -->
+    <section class="about-company reveal">
+        <div class="card-section">
+            <div class="company-content">
+                <div class="company-image">
+                    <img src="KJ_ABOUTUS.png" alt="KJ Systems Office">
+                </div>
+                <div class="company-text">
+                    <h2>Who We Are</h2>
+                    <h5><strong>KJ Systems India Private Limited</strong></h5>
+                    <p>
+                        KJ Systems is a Healthcare product based software Company, was founded in 2008 by Dr. Kumara Prathipati 
+                        and Dr. Joseph Reddy, with a cumulative 70 years of practicing medicine, with deep domain knowledge and singular focus, 
+                        they identified many pain points that medical providers have in giving care.
+                    </p>
+                    <p>
+                        To address these pain points and streamline processes across all aspects of the continuum of care with 
+                        an easy-to-use and affordable technology, they have built a robust, feature rich suite of solution; 
+                        'EHR YOUR WAY' to deliver value to the stakeholders of the healthcare industry worldwide.
+                    </p>
+                    <p>
+                        EHR YOUR WAY was built with our own Doctor's practical domain knowledge, inputs from industry veterans, 
+                        clinicians, medical authorities and patients. Designed with intuitive user-interface, our modular products are scalable and easy to implement, 
+                        making us the obvious choice for small, mid-sized and large private sector hospitals across U.S.A.
+                    </p>
+                    <p>
+                        We are driven to deliver “A Complete Healthcare Management System.” Our product transform the way clinical
+                         information is captured and used to improve the quality of patient care, their safety and service delivery. 
+                         KJ Systems India private limited is headquartered in U.S.A and with a development center in India.
+                    </p>
+                    <h6>KJ Systems India private limited is headquartered in U.S.A and with a development center in India.</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR TEAM SECTION -->
+    <section class="our-team reveal">
+        <h2>Meet Our Team</h2>
+        <div class="team-container">
+            <div class="team-card">
+                <img src="Parton_M.jpg" alt="Team Member 1">
+                <h3>DR. KUMARA PRATHIPATI, M.D.</h3>
+                <p>Co-Founder & Chief Executive Officer</p>
+            </div>
+
+            <div class="team-card">
+                <img src="Parton_M.jpg" alt="Team Member 2">
+                <h3>DR. JOSEPH REDDY, M.D.</h3>
+                <p>LCo-Founder</p>
+            </div>
+
+            <div class="team-card">
+                <img src="Parton_F.jpg" alt="Team Member 3">
+                <h3>DR. LAKSHMI PRATHIPATI, M.D.</h3>
+                <p>Chief Financial Officer</p>
+            </div>
+
+            <div class="team-card">
+                <img src="Parton_F.jpg" alt="Team Member 4">
+                <h3>APARNA REDDY</h3>
+                <p>Chief Operating Officer</p>
+            </div>
+
+            <div class="team-card">
+                <img src="Parton_M.jpg" alt="Team Member 2">
+                <h3>JAY LANCY</h3>
+                <p>Director of Strategy & Sales</p>
+            </div>
+
+            <div class="team-card">
+                <img src="Parton_M.jpg" alt="Team Member 2">
+                <h3>MOHAN RAO VARDHINENI</h3>
+                <p>Chief Technical Officer</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <img src="KJ_SYSTEMS-LOGO.png" alt="KJ Systems Logo" width="60" height="60">
+            <h3>KJ SYSTEMS</h3>
+            <p>© 2025 KJ Systems. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="mobile-menu">
+        <div class="close-btn">&times;</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About_page.html">About</a></li>
+            <li><a href="Careers_page.html">Careers</a></li>
+            <li><a href="Contact_page.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const closeBtn = document.querySelector('.close-btn');
+
+        burger.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+
+        });
+
+        closeBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+    </script>
+
+    <script>
+        function reveal() {
+            const reveals = document.querySelectorAll('.reveal');
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveals[i].getBoundingClientRect().top;
+                const elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
+                } else {
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+        window.addEventListener('scroll', reveal);
+        reveal();
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
